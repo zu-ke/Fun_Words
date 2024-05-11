@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>飞机打单词游戏</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<div id="unsupported-screen">
+  <p>抱歉，您的屏幕尺寸不支持此游戏。</p>
+  <p>请在屏幕宽度大于或等于1900px的设备上打开。</p>
+</div>
+
+<div id="maxBox">
+
+  <div id="top">
+    <div id="topdiv1">打单词小游戏</div>
+    <div id="btns">
+      <div class="dropdown-wrapper">
+        <span id="sp">难度选择：</span>
+        <select style="width: 200px" class="dropdown" v-model="selectedLevel">
+          <option v-for="item in level" :value="item">{{ item.name }}</option>
+        </select>
+      </div>
+      <button class="btn" id="spc">开始/暂停/继续</button>
+      <button class="btn" id="stop">结束</button>
+    </div>
+  </div>
+
+  <div id="box">
+    <div class="out"  v-for="(i, index) in wordList">
+      <div class="english_word_module" v-bind:data-chinese="i.chinese">{{i.word}}</div>
+    </div>
+    <div id="plan">
+      <img src="img/2.jpg"/>
+    </div>
+    <p style="position: absolute; border-bottom: 1px solid #ccc; width: 100%; bottom: 140px;"></p>
+    <div id="chinese">{{chinese}}</div>
+  </div>
+
+  <div id="bottom">
+    <div id="moveBtns" style="display: inline-block">
+      <button id="toLeft" class="mbtn">左移</button>
+      <button id="transmit" class="mbtn">发射</button>
+      <button id="toRight" class="mbtn">右移</button>
+    </div>
+  </div>
+
+  <div id="collisionModal" style="display:none;">
+    <div id="msg">
+      <p id="hitInfo" style="color: deepskyblue; text-align: center; font-size: 30px; margin-bottom: 20px">单词被击中啦！</p>
+      <p id="wordInfo" style="color: blue">被击中单词：xxx</p>
+      <p id="bulletInfo" style="color: blue">子弹：xxx</p>
+      <p id="resultInfo" style="color: red">游戏结果：正确</p>
+      <p id="correctAnswer" style="color: rgb(23, 137, 77)">正确答案：xxx</p>
+      <button id="playAgain">再来一次</button>
+      <button id="nextLevel">下一关</button>
+      <button id="endGame">结束游戏</button>
+    </div>
+  </div>
+  
+</div>
+
+<script src="js/jquery.js"></script>
+<script src="js/vue.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+<script src="js/index.js"></script>
+
+
+</body>
+</html>

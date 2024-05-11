@@ -1,0 +1,212 @@
+#unsupported-screen {
+    display: none;
+    position: fixed;
+    top: 40%;
+    left: 40%;
+    background: white;
+    z-index: 9999;
+    text-align: center;
+    padding-top: 50px;
+}
+
+#unsupported-screen > p {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+body {
+    overflow: hidden;
+}
+
+#maxBox {
+    position: relative;
+    width: 1900px;
+    height: 900px;
+    /* 创建线性渐变背景 */
+    /* 创建从左上角到右下角的线性渐变背景 */
+    /*background: linear-gradient(to bottom right, #6600ff, #ffffff);*/
+    margin: 0 auto;
+}
+
+#box {
+    position: relative;
+    width: 1900px;
+    height: 700px;
+    padding-top: 30px;
+    /*background-color: pink;*/
+}
+
+#plan {
+    position: absolute;
+    left: 0; /* 添加这个属性 */
+    bottom: 180px;
+    width: 100px;
+    height: 80px;
+    /*background-color: aquamarine;*/
+    line-height: 80px;
+    text-align: center;
+    /*background-image: url("../img/2.jpg");*/
+    background-size: 100% 100%;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#plan > img {
+    width: 150px;
+}
+
+#top {
+    position: relative;
+    width: 1900px;
+    height: 100px;
+    box-shadow: 5px 5px 10px #ccc;
+}
+
+#btns {
+    position: absolute;
+    bottom: 20px;
+    right: 0;
+    margin-right: 10px;
+    display: inline-block;
+    /*width: 200px;*/
+    /*height: 100px;*/
+}
+
+.btn {
+    width: 200px;
+    height: 50px;
+}
+
+#bottom {
+    position: relative;
+    width: 1900px;
+    height: 100px;
+    /*background-color: antiquewhite;*/
+    /*box-shadow: 5px 5px 5px #ccc;*/
+}
+
+.mbtn {
+    position: relative;
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+}
+
+#moveBtns {
+    position: absolute;
+    right: 41%;
+}
+
+.english_word_module {
+    line-height: 80px;
+    text-align: center;
+    position: relative; /* 添加这个属性 */
+    width: 200px;
+    height: 80px;
+    background-color: yellow;
+    margin-bottom: 10px;
+    border-radius: 100px;
+}
+
+#topdiv1 {
+    height: 100px;
+    display: inline-block;
+    font-size: 50px;
+    line-height: 100px;
+}
+
+#chinese {
+    position: relative;
+    display: inline-block;
+    width: 350px;
+    height: 100px;
+    text-align: center;
+    background-color: yellow;
+    font-size: 20px;
+    left: 40.5%;
+    margin-top: 225px;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#collisionModal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#collisionModal > div {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/*下拉框*/
+/* 可以在这里添加一些CSS来美化下拉框 */
+.dropdown {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    height: 40px;
+    -webkit-appearance: none; /* 移除iOS默认的外观 */
+    -moz-appearance: none; /* 移除Firefox默认的外观 */
+    appearance: none; /* 移除默认的外观 */
+}
+
+/* 为下拉框添加一个自定义的箭头 */
+.dropdown-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-wrapper:after {
+    content: '▼';
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none; /* 确保点击箭头时也能打开下拉框 */
+}
+
+#sp {
+    font-size: 20px;
+}
+
+button {
+    background-color: yellowgreen;
+    border-radius: 10px;
+    border: none;
+}
+
+.mbtn {
+    height: 65px;
+    margin-right: 10px;
+}
+
+#msg {
+    width: 400px;
+    font-size: 20px;
+}
+
+#msg > p {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+#msg > button {
+    width: 100px;
+    height: 50px;
+}
